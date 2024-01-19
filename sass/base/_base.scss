@@ -7,7 +7,7 @@
 }
 
 html {
-  // Definisanje 1rem za citav sajt
+  // This defines what 1rem is
   font-size: 62.5%; // 1 rem = 10px; 10px/16px = 62.5%
 
   @include respond(tab-land) {
@@ -20,10 +20,6 @@ html {
   }
   // width < 900px
 
-  @include respond(phone) {
-    font-size: 30%; //1 rem = 4.8px,
-  }
-
   @include respond(big-desktop) {
     font-size: 75%; // 1rem = 12px  , 12/16
   }
@@ -31,4 +27,9 @@ html {
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }
